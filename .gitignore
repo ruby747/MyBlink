@@ -1,0 +1,77 @@
+# macOS
+.DS_Store
+
+# Node / JavaScript
+**/node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+coverage/
+dist/
+build/
+.cache/
+.tmp/
+
+# React Native / Metro / Watchman
+.metro-health-check*
+.watchmanconfig
+
+# iOS / Xcode
+**/DerivedData/
+**/build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.xcuserstate
+**/.xcode.env.local
+
+# CocoaPods / Ruby bundler
+**/Pods/
+vendor/bundle/
+.bundle/
+Gemfile.lock
+
+# Android / Gradle
+**/build/
+.gradle/
+**/.gradle/
+**/.idea/
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
+.kotlin/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Fastlane artifacts
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
