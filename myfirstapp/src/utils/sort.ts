@@ -1,9 +1,10 @@
 import { MemoItemData } from '../types';
 
 const colorRank: Record<string, number> = {
-  red: 0,
-  blue: 1,
-  black: 2,
+  green: 0,
+  red: 1,
+  blue: 2,
+  black: 3,
 };
 
 export function sortMemos(a: MemoItemData, b: MemoItemData) {

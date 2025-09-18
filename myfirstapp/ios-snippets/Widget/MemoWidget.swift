@@ -39,7 +39,7 @@ struct Provider: TimelineProvider {
     if let data = ud?.data(forKey: "WIDGET_MEMOS") {
       memos = (try? JSONDecoder().decode([Memo].self, from: data)) ?? []
     }
-    let rank: [String: Int] = ["red": 0, "blue": 1, "black": 2]
+    let rank: [String: Int] = ["green": 0, "red": 1, "blue": 2, "black": 3]
     memos.sort { (rank[$0.color] ?? 99) < (rank[$1.color] ?? 99) }
     return Entry(date: Date(), memos: memos)
   }
@@ -96,6 +96,7 @@ struct WidgetView: View {
 // iOS 14+ friendly flow layout (wrap items across lines)
 private func memoColor(_ name: String) -> Color {
   switch name {
+  case "green": return .green
   case "red": return .red
   case "blue": return .blue
   default: return .primary

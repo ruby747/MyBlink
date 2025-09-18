@@ -59,7 +59,7 @@ function MemoItem({ item, onChangeColor, onRequestEdit, onDelete, selectable, se
     if (selectable) {
       onToggleSelect?.(item.id);
     } else {
-      // Single tap → cycle color: black -> blue -> red -> black
+      // Single tap → cycle color: black -> blue -> red -> green -> black
       onChangeColor(item.id, nextColor(item.color));
     }
   };
@@ -83,6 +83,8 @@ function dynamicColorStyle(color: MemoColor, isDark: boolean) {
       return { color: '#E53935' };
     case 'blue':
       return { color: '#1E88E5' };
+    case 'green':
+      return { color: '#43A047' };
     default:
       return { color: isDark ? '#EEE' : '#111' };
   }
@@ -118,6 +120,8 @@ function nextColor(color: MemoColor): MemoColor {
       return 'blue';
     case 'blue':
       return 'red';
+    case 'red':
+      return 'green';
     default:
       return 'black';
   }

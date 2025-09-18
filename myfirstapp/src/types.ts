@@ -1,4 +1,4 @@
-export type MemoColor = 'red' | 'blue' | 'black';
+export type MemoColor = 'green' | 'red' | 'blue' | 'black';
 
 export interface MemoItemData {
   id: string;
